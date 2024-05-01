@@ -25,7 +25,6 @@ void enqueue(int a)
 }
 void dequeue()
 {
-
     if (rear == front)
     {
         printf("Empty Queue front = %d, rear=%d\n", front, rear);
@@ -36,6 +35,34 @@ void dequeue()
         printf("Queue removed=%d\n",q[front]);
         q[front]=0;
     }
+}
+int printqueue()
+{
+    if(rear==front){
+        printf("Empty Queue front = %d, rear=%d\n", front, rear);
+    }
+    else if(rear>front){
+        for (int i = front+1; i <= rear; i++)
+        {
+            printf("%d\n", q[i]);
+        }
+    }
+    else{
+        for (int i = front+1; i < n; i++)
+        {
+            printf("%d\n", q[i]);
+        }
+        for (int i = 0; i <= rear; i++)
+        {
+            printf("%d\n", q[i]);
+        }
+    }
+
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("%d\n", q[i]);
+    // }
+    return 0;
 }
 int main()
 {
@@ -66,8 +93,10 @@ int main()
     dequeue();
     dequeue();
     dequeue();
-
-
+  enqueue(1);
+    enqueue(1);
+      enqueue(0);
+        enqueue(1);
 
 
 
@@ -78,14 +107,13 @@ int main()
 
 
 
-    printf("%d\n", q[0]);
-    printf("%d\n", q[1]);
-    printf("%d\n", q[2]);
-    printf("%d\n", q[3]);
-    printf("%d\n", q[4]);
-    printf("rear=%d\n", rear);
-    printf("front=%d\n", front);
-
-
+    // printf("%d\n", q[0]);
+    // printf("%d\n", q[1]);
+    // printf("%d\n", q[2]);
+    // printf("%d\n", q[3]);
+    // printf("%d\n", q[4]);
+    // printf("rear=%d\n", rear);
+    // printf("front=%d\n", front);
+    printqueue();
     return 0;
 }
