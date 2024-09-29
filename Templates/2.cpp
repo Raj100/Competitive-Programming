@@ -40,6 +40,25 @@ void printVector(const vector<T>& vec) {
 }
 
 int main() {
-
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        string ans = "";
+        FOR(i, n) {
+            if (i % 5 == 0)
+                ans += 'a';
+            else if (i % 5 == 1)
+                ans += 'e';
+            else if (i % 5 == 2)
+                ans += 'i';
+            else if (i % 5 == 3)
+                ans += 'o';
+            else if (i % 5 == 4)
+                ans += 'u';
+        }
+        cout << ans << endl;
+    }
     return 0;
 }
