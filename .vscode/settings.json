@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "HEAPSORT.C": "cpp"
+        "ios": "cpp",
+        "string": "cpp"
     }
 }
